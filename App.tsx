@@ -170,18 +170,38 @@ function App() {
   // User CRUD Logic
   const handleSaveUser = async (user: User) => {
     try {
+      // Validación básica
+      if (!user.name?.trim()) {
+        alert('El nombre de usuario es requerido.');
+        return;
+      }
+
+      if (!user.password?.trim()) {
+        alert('Error: La contraseña no puede estar vacía.');
+        return;
+      }
+
+      // Verificar si ya existe un usuario con el mismo nombre (solo para nuevos usuarios o cambios de nombre)
+      const existingUser = allUsers.find(u => u.name === user.name && u.id !== user.id);
+      if (existingUser) {
+        alert('Ya existe un usuario con ese nombre. Por favor, elija un nombre diferente.');
+        return;
+      }
+
       const existing = allUsers.find(u => u.id === user.id);
       if (existing) {
+        // Actualizar usuario existente
         await usersService.update(user.id, user);
         setAllUsers(prev => prev.map(u => u.id === user.id ? user : u));
       } else {
+        // Crear nuevo usuario
         const { id, ...userData } = user;
         const newId = await usersService.add(userData);
         setAllUsers(prev => [...prev, { ...user, id: newId }]);
       }
     } catch (error) {
       console.error('Error guardando usuario:', error);
-      alert('Error al guardar el usuario. Por favor, inténtalo de nuevo.');
+      alert('Error al guardar el usuario. Por favor, inténtelo de nuevo.');
     }
   };
 
