@@ -1,0 +1,48 @@
+
+{
+  "name": "tradebe-ot-asset-inventory",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sistema de inventario de activos de tecnología operacional para Tradebe",
+  "type": "module",
+  "author": {
+    "name": "Automática Integral",
+    "email": "info@automaticaintegral.com",
+    "url": "https://automaticaintegral.com"
+  },
+  "client": "Tradebe",
+  "keywords": [
+    "inventory",
+    "asset-management", 
+    "ot",
+    "operational-technology",
+    "industrial-automation",
+    "tradebe",
+    "dashboard"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "migrate": "npx tsx scripts/migrateToFirebase.ts"
+  },
+  "dependencies": {
+    "firebase": "^10.12.2",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^3.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/node": "^20.11.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "firebase-tools": "^13.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  }
+}

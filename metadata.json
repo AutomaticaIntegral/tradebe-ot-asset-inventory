@@ -1,0 +1,5 @@
+{
+  "name": "OT Asset Inventory Dashboard",
+  "description": "A visual dashboard for visualizing Operational Technology (OT) asset inventory data, based on a technical report. It provides summaries, charts, and a detailed, searchable table of all assets.",
+  "requestFramePermissions": []
+}
