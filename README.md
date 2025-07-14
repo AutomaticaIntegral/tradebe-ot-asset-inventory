@@ -2,6 +2,8 @@
 
 Dashboard profesional para la gestión de inventario de activos de tecnología operacional (OT) desarrollado por **Automática Integral** para **Tradebe**.
 
+🌐 **Aplicación en vivo**: https://tradebe.automaticaintegral.es/
+
 ## Descripción del Proyecto
 
 Este sistema permite la gestión completa del inventario de activos industriales, incluyendo:
@@ -49,6 +51,7 @@ Este sistema permite la gestión completa del inventario de activos industriales
 - Structured data JSON-LD
 - Favicon personalizado con logo de Tradebe
 - Keywords específicos del sector industrial
+- **Dominio personalizado**: https://tradebe.automaticaintegral.es/
 
 ## Tecnologías Utilizadas
 
@@ -66,21 +69,27 @@ Este sistema permite la gestión completa del inventario de activos industriales
 
 ### Configuración Local
 
-1. **Instalar dependencias:**
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/AutomaticaIntegral/tradebe-ot-asset-inventory.git
+   cd tradebe-ot-asset-inventory
+   ```
+
+2. **Instalar dependencias:**
    ```bash
    npm install
    ```
 
-2. **Configurar Firebase:**
+3. **Configurar Firebase:**
    - Configurar las credenciales de Firebase en `firebase.ts`
    - Asegurarse de tener los permisos necesarios para acceder a la base de datos
 
-3. **Ejecutar en modo desarrollo:**
+4. **Ejecutar en modo desarrollo:**
    ```bash
    npm run dev
    ```
 
-4. **Construir para producción:**
+5. **Construir para producción:**
    ```bash
    npm run build
    ```
@@ -107,9 +116,33 @@ src/
 - **Supervisor**: supervisor/supervisor  
 - **Operador**: operator/operator
 
-## Deployment
+## Deployment y Hosting
 
-El proyecto está configurado para deployment en Firebase Hosting. Consultar el archivo `firebase.json` para la configuración.
+### Firebase Hosting
+- **URL Principal**: https://tradebe.automaticaintegral.es/
+- **URL Backup**: https://inventariotradebev0.web.app
+- **Proyecto Firebase**: inventariotradebev0
+- **SSL**: Automático (certificado válido)
+
+### Configuración de Dominio Personalizado
+El dominio `tradebe.automaticaintegral.es` está configurado como subdominio de `automaticaintegral.es`, reflejando la relación profesional entre:
+- **Cliente**: Tradebe
+- **Desarrollador**: Automática Integral
+
+### Comandos de Deployment
+```bash
+# Construir para producción
+npm run build
+
+# Deploy a Firebase
+firebase deploy --only hosting
+```
+
+## Enlaces Importantes
+
+- 🌐 **Aplicación**: https://tradebe.automaticaintegral.es/
+- 📱 **Repositorio**: https://github.com/AutomaticaIntegral/tradebe-ot-asset-inventory
+- 🔧 **Firebase Console**: https://console.firebase.google.com/project/inventariotradebev0
 
 ## Soporte y Mantenimiento
 
