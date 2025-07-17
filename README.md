@@ -13,6 +13,21 @@ Este sistema permite la gestión completa del inventario de activos industriales
 - Reportes y análisis de datos
 - Gestión de usuarios y permisos
 
+## 📋 Información de Versiones
+
+### Versión Actual: `v1.0.0` 🚀
+- **Fecha de Release**: Enero 2024
+- **Estado**: Producción estable
+- **Historial Completo**: Ver [CHANGELOG.md](./CHANGELOG.md)
+
+### Próximas Versiones
+- **v1.1.0**: Mejoras de UX y nuevos filtros
+- **v1.2.0**: Funcionalidades avanzadas y API
+- **v2.0.0**: Escalabilidad multi-tenant
+
+### Releases en GitHub
+📦 **Releases oficiales**: [Ver en GitHub](https://github.com/tu-usuario/tradebe-ot-asset-inventory/releases)
+
 ## Características Principales
 
 - 📊 **Dashboard Interactivo**: Visualización de datos en tiempo real
